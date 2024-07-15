@@ -97,3 +97,9 @@ button {
 .btn-3 span:hover:after {
   width: 100%;
 }
+
+/* Selected button styles */
+.selected {
+  color: rgba(2, 126, 251, 1);
+  background: transparent;
+}

@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://your-production-api-url/financial',
+  apiUrl: 'https://backend-brown-gamma.vercel.app/',
 };

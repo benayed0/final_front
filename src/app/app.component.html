@@ -1,13 +1,25 @@
 @if(chartOption){
-<div>
-  <button class="custom-btn btn-3" (click)="onSymbolChange('AAPL')">
+<div style="text-align: center">
+  <button
+    class="custom-btn btn-3"
+    [ngClass]="{ selected: selectedSymbol === 'AAPL' }"
+    (click)="onSymbolChange('AAPL')"
+  >
     <span>Apple</span>
   </button>
-  <button class="custom-btn btn-3" (click)="onSymbolChange('NKE')">
+  <button
+    class="custom-btn btn-3"
+    [ngClass]="{ selected: selectedSymbol === 'NKE' }"
+    (click)="onSymbolChange('NKE')"
+  >
     <span>Nike</span>
   </button>
 
-  <button class="custom-btn btn-3" (click)="onSymbolChange('SBUX')">
+  <button
+    class="custom-btn btn-3"
+    [ngClass]="{ selected: selectedSymbol === 'SBUX' }"
+    (click)="onSymbolChange('SBUX')"
+  >
     <span>Starbucks</span>
   </button>
 </div>
