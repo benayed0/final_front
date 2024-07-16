@@ -36,7 +36,7 @@ export class AppComponent {
       this.processData(data);
     });
   }
-  private processData(data: any): void {
+  public processData(data: any): void {
     const dates = data.map((data: { date: any }) => data.date);
     const values = data.map(
       (data: { open: any; close: any; low: any; high: any }) => [

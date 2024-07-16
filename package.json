@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "local": "echo 'Building and Starting Container' && docker-compose up -d --build && open 'localhost:4200' ",
+    "distant": "vercel redeploy https://final-front-two.vercel.app/ && open 'https://final-front-two.vercel.app/'"
   },
   "private": true,
   "dependencies": {
