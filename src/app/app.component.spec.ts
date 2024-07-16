@@ -29,10 +29,10 @@ describe('AppComponent', () => {
       providers: [
         { provide: FinancialService, useValue: financialServiceMock },
         ChangeDetectorRef,
-        // {
-        //   provide: NGX_ECHARTS_CONFIG,
-        //   useValue: { echarts: () => import('echarts') },
-        // },
+        {
+          provide: NGX_ECHARTS_CONFIG,
+          useValue: { echarts: () => import('echarts') },
+        },
       ],
     }).compileComponents();
   });
