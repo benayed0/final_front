@@ -10,6 +10,9 @@ export class FinancialService {
   constructor(private http: HttpClient) {}
 
   getStockData(symbol: string): Observable<any> {
-    return this.http.get<any>(`${environment.apiUrl}/stocks/${symbol}`);
+    const req_url = `${environment.apiUrl}/stocks/${symbol}`;
+    console.log(req_url);
+
+    return this.http.get<any>(req_url);
   }
 }

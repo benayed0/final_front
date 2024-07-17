@@ -37,22 +37,28 @@ try {
   const { missingInProd, missingInDev } = compareKeys(devKeys, prodKeys);
 
   if (missingInProd.length > 0 || missingInDev.length > 0) {
-    console.error("Environment key mismatch detected:");
+    console.error("\x1b[31m", "Environment key mismatch detected:");
     if (missingInProd.length > 0) {
       console.error(
+        "\x1b[31m",
         `Keys missing in production environment: ${missingInProd.join(", ")}`
       );
+      process.exit(1);
     }
     if (missingInDev.length > 0) {
       console.error(
+        "\x1b[31m",
         `Keys missing in development environment: ${missingInDev.join(", ")}`
       );
     }
     process.exit(1);
   } else {
-    console.log("Environment variables are OK.");
+    console.log("\x1b[32m", "Environment variables are OK.");
   }
 } catch (error) {
-  console.error(`Error verifying environment keys: ${error.message}`);
+  console.error(
+    "\x1b[31m",
+    `Error verifying environment keys: ${error.message}`
+  );
   process.exit(1);
 }
