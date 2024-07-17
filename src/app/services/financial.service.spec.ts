@@ -4,7 +4,7 @@ import {
   HttpTestingController,
 } from '@angular/common/http/testing';
 import { FinancialService } from './financial.service';
-import { environment } from '../environments/environment';
+import { environment } from '../environments/environment.development';
 
 describe('FinancialService', () => {
   let service: FinancialService;
