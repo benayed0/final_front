@@ -5,13 +5,12 @@ const checkSign = "\u{2705}";
 const dotenv = require("dotenv").config({ path: "src/.env" });
 
 const envFile = `export const environment = {
-    VARIABLE_NAME: '${process.env.VARIABLE_NAME}',
-    OTHER_VARIABLE_NAME: '${process.env.OTHER_VARIABLE_NAME}',
+    API_URL: '${process.env.API_URL}',
 };
 `;
 const targetPath = path.join(
   __dirname,
-  "./src/environments/environment.development.ts"
+  "./src/app/environments/environment.development.ts"
 );
 fs.writeFile(targetPath, envFile, (err) => {
   if (err) {
